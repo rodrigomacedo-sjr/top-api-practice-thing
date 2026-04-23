@@ -1,5 +1,6 @@
 import "./theme-toggle.css";
 import ThemeHandler from "../../theme.js";
+import Randomizer from "../Randomizer/Randomizer.js";
 
 const ThemeToggle = function () {
   const outer = document.createElement("div");
@@ -15,12 +16,13 @@ const ThemeToggle = function () {
     }
   };
 
-  button.addEventListener("click", (event) => {
+  outer.addEventListener("click", (event) => {
     event.preventDefault();
 
     document.startViewTransition(() => {
       ThemeHandler.togglePreference();
       ThemeHandler.apply();
+      Randomizer.apply();
 
       apply();
     });

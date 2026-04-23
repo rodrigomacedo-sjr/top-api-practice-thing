@@ -1,0 +1,39 @@
+@import "../../css/theme.css";
+
+.rand-button {
+  width: 150px;
+  height: 50px;
+
+  border-radius: 25px;
+
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+
+.rand-button:hover {
+  transform: scale(1.01);
+  opacity: 0.95;
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+
+.rand-button:active {
+  transform: scale(1.02);
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+
+.dark-mode {
+  background-color: var(--dk-detail);
+  border: 1px solid var(--dk-sub);
+  color: var(--dk-text);
+}
+
+.light-mode {
+  background-color: var(--lg-detail);
+  border: 1px solid var(--lg-sub);
+  color: var(--lg-text);
+}
