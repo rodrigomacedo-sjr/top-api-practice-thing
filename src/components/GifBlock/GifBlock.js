@@ -9,7 +9,8 @@ const GifBlock = (function () {
         return response.json();
       })
       .then(function (response) {
-        gif.src = response.data.images.original.url;
+        //gif.src = response.data.images.original.url;
+        console.log("a");
       });
   };
 

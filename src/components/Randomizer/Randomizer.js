@@ -22,6 +22,8 @@ const Randomizer = (function () {
     GifBlock.reload();
   });
 
+  apply();
+
   return {
     element: rand,
     apply,

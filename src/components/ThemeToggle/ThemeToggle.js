@@ -1,6 +1,7 @@
 import "./theme-toggle.css";
 import ThemeHandler from "../../theme.js";
 import Randomizer from "../Randomizer/Randomizer.js";
+import SearchBar from "../SearchBar/SearchBar.js";
 
 const ThemeToggle = function () {
   const outer = document.createElement("div");
@@ -23,6 +24,7 @@ const ThemeToggle = function () {
       ThemeHandler.togglePreference();
       ThemeHandler.apply();
       Randomizer.apply();
+      SearchBar.apply();
 
       apply();
     });
