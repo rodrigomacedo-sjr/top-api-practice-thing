@@ -1,0 +1,34 @@
+import "./theme-toggle.css";
+import ThemeHandler from "../../theme.js";
+
+const ThemeToggle = function () {
+  const outer = document.createElement("div");
+  outer.id = "theme-toggle";
+  const button = document.createElement("button");
+  outer.appendChild(button);
+
+  const apply = function () {
+    if (localStorage.getItem("theme") === "dark") {
+      button.className = "dark-mode";
+    } else {
+      button.className = "light-mode";
+    }
+  };
+
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    document.startViewTransition(() => {
+      ThemeHandler.togglePreference();
+      ThemeHandler.apply();
+
+      apply();
+    });
+  });
+
+  apply();
+
+  return outer;
+};
+
+export default ThemeToggle;

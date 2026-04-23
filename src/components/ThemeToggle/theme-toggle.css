@@ -1,0 +1,34 @@
+@import "../../css/theme.css";
+
+#theme-toggle {
+  width: 100px;
+  height: 50px;
+
+  padding: 0.2%;
+  display: flex;
+
+  transition: background-color 0.5s ease-in-out;
+
+  border-radius: 25px;
+}
+
+#theme-toggle>button {
+  view-transition-name: slide-item;
+
+  width: 50%;
+  height: 100%;
+
+  border-radius: 50%;
+  background-color: white;
+  border: 0px;
+}
+
+#theme-toggle:has(.dark-mode) {
+  background-color: var(--dk-sub);
+  flex-direction: row;
+}
+
+#theme-toggle:has(.light-mode) {
+  background-color: var(--lg-sub);
+  flex-direction: row-reverse;
+}
