@@ -1,4 +1,5 @@
 import "./search-bar.css";
+import GifBlock from "../GifBlock/GifBlock.js";
 
 const SearchBar = (function () {
   const PREFIX = "sbar";
@@ -20,7 +21,7 @@ const SearchBar = (function () {
     const data = new FormData(form);
     const obj = Object.fromEntries(data.entries());
 
-    console.log(obj.search);
+    GifBlock.search(obj.search);
 
     form.reset();
   });
