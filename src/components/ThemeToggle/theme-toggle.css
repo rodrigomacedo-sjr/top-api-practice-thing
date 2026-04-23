@@ -10,6 +10,7 @@
   transition: background-color 0.5s ease-in-out;
 
   border-radius: 25px;
+  position: absolute;
 }
 
 #theme-toggle>button {
